@@ -28,19 +28,19 @@ function playRound (playerSelection) {
 computerSelection = computerPlay();
     if (playerSelection == computerSelection) {
         resultDiv.textContent = "It's a tie !";
-        scoreDiv.textContent = `${playerScore} to ${computerScore}` ;
+        scoreDiv.textContent = `${playerScore} - ${computerScore}` ;
         return "tie";
 
 //player chooses rock
     } else if (playerSelection == 'rock') {
         if (computerSelection == 'paper') {
             computerScore++;
-            scoreDiv.textContent = `${playerScore} to ${computerScore}` ;
+            scoreDiv.textContent = `${playerScore} - ${computerScore}` ;
         resultDiv.textContent = "It's a tie !";    
         } else if (computerSelection == 'scissors') {
             resultDiv.textContent = "You Win ! Rock beats Scissors";
             playerScore++;
-            scoreDiv.textContent = `${playerScore} to ${computerScore}` ;
+            scoreDiv.textContent = `${playerScore} - ${computerScore}` ;
         }
     
 //player chooses paper    
@@ -48,11 +48,11 @@ computerSelection = computerPlay();
         if (computerSelection == 'rock') {
             resultDiv.textContent = "You Win ! Paper beats Rock";
             playerScore++;
-            scoreDiv.textContent = `${playerScore} to ${computerScore}` ;
+            scoreDiv.textContent = `${playerScore} - ${computerScore}` ;
         } else if (computerSelection == 'scissors') {
             resultDiv.textContent = "You Lose ! Scissors beats Paper";
             computerScore++;
-            scoreDiv.textContent = `${playerScore} to ${computerScore}` ;
+            scoreDiv.textContent = `${playerScore} - ${computerScore}` ;
         }
         
 //player chooses scissors    
@@ -60,11 +60,11 @@ computerSelection = computerPlay();
         if (computerSelection == 'rock') {
             resultDiv.textContent = "You Lose ! Rock beats Scissors";
             computerScore++;
-            scoreDiv.textContent = `${playerScore} to ${computerScore}` ;
+            scoreDiv.textContent = `${playerScore} - ${computerScore}` ;
         } else if (computerSelection == 'paper') {
             resultDiv.textContent = "You Win ! Scissors beats Paper";
             playerScore++;
-            scoreDiv.textContent = `${playerScore} to ${computerScore}` ;
+            scoreDiv.textContent = `${playerScore} - ${computerScore}` ;
         }
     }
     
