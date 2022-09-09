@@ -2,6 +2,6 @@
 
 This project originates from the Foundations course of The Odin Project.
 
-It relies on a CSS Grid and some JavaScript to create empty divs according to a user-specified size.
+It relies on JavaScript for the game logic and DOM modification.
 
-Each click on a div toggles a color class.
+Each click triggers a round. The first with 5 points wins the game.
